@@ -30,6 +30,11 @@ class Ball(Main):
             self.rect.x += self.speed
             if self.rect.x > w:
                 self.hface = "left"
+
+
+        if sprite.collide_rect(ball,player):
+            ball.hface ="right"
+
         self.reset()   
 
 class Player(Main):
